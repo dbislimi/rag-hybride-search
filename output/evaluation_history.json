@@ -71,6 +71,12 @@
               "metrics": {
                 "ndcg@10": 0.2801060426844334
               }
+            },
+            {
+              "date": "2026-11-23T19:44:13.486642+00:00",
+              "metrics": {
+                "ndcg@10": 0.2801060426844334
+              }
             }
           ]
         }
@@ -81,6 +87,12 @@
           "evaluations": [
             {
               "date": "2026-11-23T18:20:30.579433+00:00",
+              "metrics": {
+                "ndcg@10": 0.3511589482163348
+              }
+            },
+            {
+              "date": "2026-11-23T19:44:13.486642+00:00",
               "metrics": {
                 "ndcg@10": 0.3511589482163348
               }
@@ -97,6 +109,12 @@
               "metrics": {
                 "ndcg@10": 0.40063431127188553
               }
+            },
+            {
+              "date": "2026-11-23T19:44:13.486642+00:00",
+              "metrics": {
+                "ndcg@10": 0.40063431127188553
+              }
             }
           ]
         }
@@ -105,11 +123,18 @@
         {
           "parameters": {
             "bm25_weight": 1.0,
-            "dense_weight": 1.0
+            "dense_weight": 1.0,
+            "rrf_k": 60
           },
           "evaluations": [
             {
               "date": "2026-11-23T18:20:30.579433+00:00",
+              "metrics": {
+                "ndcg@10": 0.3398669688628061
+              }
+            },
+            {
+              "date": "2026-11-23T19:44:13.486642+00:00",
               "metrics": {
                 "ndcg@10": 0.3398669688628061
               }
@@ -121,11 +146,18 @@
         {
           "parameters": {
             "bm25_weight": 1.0,
-            "dense_weight": 1.0
+            "dense_weight": 1.0,
+            "rrf_k": 60
           },
           "evaluations": [
             {
               "date": "2026-11-23T18:20:30.579433+00:00",
+              "metrics": {
+                "ndcg@10": 0.4001909646276552
+              }
+            },
+            {
+              "date": "2026-11-23T19:44:13.486642+00:00",
               "metrics": {
                 "ndcg@10": 0.4001909646276552
               }
@@ -137,11 +169,18 @@
         {
           "parameters": {
             "bm25_weight": 2.0,
-            "dense_weight": 1.0
+            "dense_weight": 1.0,
+            "rrf_k": 60
           },
           "evaluations": [
             {
               "date": "2026-11-23T18:20:30.579433+00:00",
+              "metrics": {
+                "ndcg@10": 0.3158301254275387
+              }
+            },
+            {
+              "date": "2026-11-23T19:44:13.486642+00:00",
               "metrics": {
                 "ndcg@10": 0.3158301254275387
               }
@@ -153,11 +192,18 @@
         {
           "parameters": {
             "bm25_weight": 2.0,
-            "dense_weight": 1.0
+            "dense_weight": 1.0,
+            "rrf_k": 60
           },
           "evaluations": [
             {
               "date": "2026-11-23T18:20:30.579433+00:00",
+              "metrics": {
+                "ndcg@10": 0.3514008636391269
+              }
+            },
+            {
+              "date": "2026-11-23T19:44:13.486642+00:00",
               "metrics": {
                 "ndcg@10": 0.3514008636391269
               }
@@ -169,11 +215,18 @@
         {
           "parameters": {
             "bm25_weight": 1.0,
-            "dense_weight": 2.0
+            "dense_weight": 2.0,
+            "rrf_k": 60
           },
           "evaluations": [
             {
               "date": "2026-11-23T18:20:30.579433+00:00",
+              "metrics": {
+                "ndcg@10": 0.34055888321706734
+              }
+            },
+            {
+              "date": "2026-11-23T19:44:13.486642+00:00",
               "metrics": {
                 "ndcg@10": 0.34055888321706734
               }
@@ -185,11 +238,154 @@
         {
           "parameters": {
             "bm25_weight": 1.0,
-            "dense_weight": 2.0
+            "dense_weight": 2.0,
+            "rrf_k": 60
           },
           "evaluations": [
             {
               "date": "2026-11-23T18:20:30.579433+00:00",
+              "metrics": {
+                "ndcg@10": 0.40063431127188553
+              }
+            },
+            {
+              "date": "2026-11-23T19:44:13.486642+00:00",
+              "metrics": {
+                "ndcg@10": 0.40063431127188553
+              }
+            }
+          ]
+        }
+      ],
+      "hybrid dense 95 BM25 05": [
+        {
+          "parameters": {
+            "bm25_weight": 0.05,
+            "dense_weight": 0.95,
+            "rrf_k": 60
+          },
+          "evaluations": [
+            {
+              "date": "2026-11-23T19:44:13.486642+00:00",
+              "metrics": {
+                "ndcg@10": 0.3589471049986481
+              }
+            }
+          ]
+        }
+      ],
+      "hybrid dense 95 BM25 05 + rerank": [
+        {
+          "parameters": {
+            "bm25_weight": 0.05,
+            "dense_weight": 0.95,
+            "rrf_k": 60
+          },
+          "evaluations": [
+            {
+              "date": "2026-11-23T19:44:13.486642+00:00",
+              "metrics": {
+                "ndcg@10": 0.40063431127188553
+              }
+            }
+          ]
+        }
+      ],
+      "hybrid dense 90 BM25 10": [
+        {
+          "parameters": {
+            "bm25_weight": 0.1,
+            "dense_weight": 0.9,
+            "rrf_k": 60
+          },
+          "evaluations": [
+            {
+              "date": "2026-11-23T19:44:13.486642+00:00",
+              "metrics": {
+                "ndcg@10": 0.35154863537739844
+              }
+            }
+          ]
+        }
+      ],
+      "hybrid dense 90 BM25 10 + rerank": [
+        {
+          "parameters": {
+            "bm25_weight": 0.1,
+            "dense_weight": 0.9,
+            "rrf_k": 60
+          },
+          "evaluations": [
+            {
+              "date": "2026-11-23T19:44:13.486642+00:00",
+              "metrics": {
+                "ndcg@10": 0.40063431127188553
+              }
+            }
+          ]
+        }
+      ],
+      "hybrid dense 80 BM25 20": [
+        {
+          "parameters": {
+            "bm25_weight": 0.2,
+            "dense_weight": 0.8,
+            "rrf_k": 60
+          },
+          "evaluations": [
+            {
+              "date": "2026-11-23T19:44:13.486642+00:00",
+              "metrics": {
+                "ndcg@10": 0.35665330046939586
+              }
+            }
+          ]
+        }
+      ],
+      "hybrid dense 80 BM25 20 + rerank": [
+        {
+          "parameters": {
+            "bm25_weight": 0.2,
+            "dense_weight": 0.8,
+            "rrf_k": 60
+          },
+          "evaluations": [
+            {
+              "date": "2026-11-23T19:44:13.486642+00:00",
+              "metrics": {
+                "ndcg@10": 0.40063431127188553
+              }
+            }
+          ]
+        }
+      ],
+      "hybrid dense 70 BM25 30": [
+        {
+          "parameters": {
+            "bm25_weight": 0.3,
+            "dense_weight": 0.7,
+            "rrf_k": 60
+          },
+          "evaluations": [
+            {
+              "date": "2026-11-23T19:44:13.486642+00:00",
+              "metrics": {
+                "ndcg@10": 0.34665321750153766
+              }
+            }
+          ]
+        }
+      ],
+      "hybrid dense 70 BM25 30 + rerank": [
+        {
+          "parameters": {
+            "bm25_weight": 0.3,
+            "dense_weight": 0.7,
+            "rrf_k": 60
+          },
+          "evaluations": [
+            {
+              "date": "2026-11-23T19:44:13.486642+00:00",
               "metrics": {
                 "ndcg@10": 0.40063431127188553
               }

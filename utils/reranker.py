@@ -6,7 +6,7 @@ from utils.retrievers import BM25Retriever, DenseRetriever
 
 RERANKER_MODEL = "BAAI/bge-reranker-v2-m3"
 
-reranker = CrossEncoder(RERANKER_MODEL, max_length=512)
+reranker = CrossEncoder(RERANKER_MODEL, max_length=512,  model_kwargs={"torch_dtype": "float16"})
 
 
 def rerank(

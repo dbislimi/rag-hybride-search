@@ -29,9 +29,13 @@ HISTORY_PATH = Path(__file__).resolve().parent / "output" / "evaluation_history.
 HISTORY_ADAPTER = TypeAdapter(EvalHistory)
 
 HYBRID_VARIANTS = {
-    "hybrid balanced": {"bm25_weight": 1.0, "dense_weight": 1.0},
-    "hybrid BM25": {"bm25_weight": 2.0, "dense_weight": 1.0},
-    "hybrid dense": {"bm25_weight": 1.0, "dense_weight": 2.0},
+    "hybrid balanced": {"bm25_weight": 1.0, "dense_weight": 1.0, "rrf_k": 60},
+    "hybrid BM25": {"bm25_weight": 2.0, "dense_weight": 1.0, "rrf_k": 60},
+    "hybrid dense": {"bm25_weight": 1.0, "dense_weight": 2.0, "rrf_k": 60},
+    "hybrid dense 95 BM25 05": {"bm25_weight": 0.05, "dense_weight": 0.95, "rrf_k": 60},
+    "hybrid dense 90 BM25 10": {"bm25_weight": 0.10, "dense_weight": 0.90, "rrf_k": 60},
+    "hybrid dense 80 BM25 20": {"bm25_weight": 0.20, "dense_weight": 0.80, "rrf_k": 60},
+    "hybrid dense 70 BM25 30": {"bm25_weight": 0.30, "dense_weight": 0.70, "rrf_k": 60},
 }
 
 
