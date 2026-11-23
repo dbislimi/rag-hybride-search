@@ -1859,6 +1859,7 @@ dependencies = [
     { name = "openai" },
     { name = "pandas" },
     { name = "pathlib" },
+    { name = "pydantic" },
     { name = "sentence-transformers" },
 ]
 
@@ -1875,6 +1876,7 @@ requires-dist = [
     { name = "openai", specifier = ">=3.51.0" },
     { name = "pandas", specifier = ">=3.1.1" },
     { name = "pathlib", specifier = ">=1.0.1" },
+    { name = "pydantic", specifier = ">=2.14.3" },
     { name = "sentence-transformers", specifier = ">=6.3.0" },
 ]
 

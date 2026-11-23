@@ -1,0 +1,202 @@
+[
+  {
+    "config": {
+      "sample_size": 50,
+      "seed": 42,
+      "candidate_k": 50,
+      "k": 10,
+      "dataset": "FiQA",
+      "query_ids": [
+        "3394",
+        "5505",
+        "6792",
+        "6909",
+        "4946",
+        "4125",
+        "6009",
+        "9598",
+        "10645",
+        "7441",
+        "5080",
+        "9329",
+        "6479",
+        "8513",
+        "10109",
+        "4844",
+        "8544",
+        "4823",
+        "1085",
+        "2388",
+        "6891",
+        "2568",
+        "7702",
+        "2376",
+        "4339",
+        "5427",
+        "7734",
+        "2486",
+        "7071",
+        "8537",
+        "7178",
+        "4777",
+        "2398",
+        "849",
+        "7534",
+        "5021",
+        "6131",
+        "10136",
+        "9548",
+        "4942",
+        "5090",
+        "6005",
+        "7533",
+        "8034",
+        "2330",
+        "7803",
+        "1933",
+        "6849",
+        "7448",
+        "42"
+      ],
+      "embedding_model": "znbang/bge:small-en-v1.5-f16",
+      "reranker_model": "BAAI/bge-reranker-v2-m3"
+    },
+    "methods": {
+      "BM25": [
+        {
+          "parameters": {},
+          "evaluations": [
+            {
+              "date": "2026-11-23T18:20:30.579433+00:00",
+              "metrics": {
+                "ndcg@10": 0.2801060426844334
+              }
+            }
+          ]
+        }
+      ],
+      "Dense": [
+        {
+          "parameters": {},
+          "evaluations": [
+            {
+              "date": "2026-11-23T18:20:30.579433+00:00",
+              "metrics": {
+                "ndcg@10": 0.3511589482163348
+              }
+            }
+          ]
+        }
+      ],
+      "dense + rerank": [
+        {
+          "parameters": {},
+          "evaluations": [
+            {
+              "date": "2026-11-23T18:20:30.579433+00:00",
+              "metrics": {
+                "ndcg@10": 0.40063431127188553
+              }
+            }
+          ]
+        }
+      ],
+      "hybrid balanced": [
+        {
+          "parameters": {
+            "bm25_weight": 1.0,
+            "dense_weight": 1.0
+          },
+          "evaluations": [
+            {
+              "date": "2026-11-23T18:20:30.579433+00:00",
+              "metrics": {
+                "ndcg@10": 0.3398669688628061
+              }
+            }
+          ]
+        }
+      ],
+      "hybrid balanced + rerank": [
+        {
+          "parameters": {
+            "bm25_weight": 1.0,
+            "dense_weight": 1.0
+          },
+          "evaluations": [
+            {
+              "date": "2026-11-23T18:20:30.579433+00:00",
+              "metrics": {
+                "ndcg@10": 0.4001909646276552
+              }
+            }
+          ]
+        }
+      ],
+      "hybrid BM25": [
+        {
+          "parameters": {
+            "bm25_weight": 2.0,
+            "dense_weight": 1.0
+          },
+          "evaluations": [
+            {
+              "date": "2026-11-23T18:20:30.579433+00:00",
+              "metrics": {
+                "ndcg@10": 0.3158301254275387
+              }
+            }
+          ]
+        }
+      ],
+      "hybrid BM25 + rerank": [
+        {
+          "parameters": {
+            "bm25_weight": 2.0,
+            "dense_weight": 1.0
+          },
+          "evaluations": [
+            {
+              "date": "2026-11-23T18:20:30.579433+00:00",
+              "metrics": {
+                "ndcg@10": 0.3514008636391269
+              }
+            }
+          ]
+        }
+      ],
+      "hybrid dense": [
+        {
+          "parameters": {
+            "bm25_weight": 1.0,
+            "dense_weight": 2.0
+          },
+          "evaluations": [
+            {
+              "date": "2026-11-23T18:20:30.579433+00:00",
+              "metrics": {
+                "ndcg@10": 0.34055888321706734
+              }
+            }
+          ]
+        }
+      ],
+      "hybrid dense + rerank": [
+        {
+          "parameters": {
+            "bm25_weight": 1.0,
+            "dense_weight": 2.0
+          },
+          "evaluations": [
+            {
+              "date": "2026-11-23T18:20:30.579433+00:00",
+              "metrics": {
+                "ndcg@10": 0.40063431127188553
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

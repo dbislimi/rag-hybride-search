@@ -4,7 +4,9 @@ from sentence_transformers import CrossEncoder
 from utils.fusion import hybrid_candidates
 from utils.retrievers import BM25Retriever, DenseRetriever
 
-reranker = CrossEncoder("BAAI/bge-reranker-v2-m3", max_length=512)
+RERANKER_MODEL = "BAAI/bge-reranker-v2-m3"
+
+reranker = CrossEncoder(RERANKER_MODEL, max_length=512)
 
 
 def rerank(
